@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpeg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Thilak C M</span><br/> From India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.jpg" width="300px" height="300px" alt="User Image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>
+                        I'm Thilak C M, a MCA student in AMC Engineering college, Bangalore. With a GPA of 7.5, I've honed skills in various areas, including AI and software development. I'm passionate about using technology to solve real-world problems, as demonstrated by my work on medical imaging and waste management projects. Outside of academics, I excel in sports and have a diverse skill set, from coding in C and Java.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web development</span><br> Designing Interactive Web pages</li>
+                            <li><span>APP development</span><br> Designing Web/App interfaces</li>
+                            <li><span>UI/UX</span><br> Designing web pages</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - current</span><br> Web development intern at CODSOFT</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - current</span><br> MCA Student in AMC Engineering college</li>
+                            <li><span>2019 - 2022</span><br> BCA in Sri krishna degree college</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
+            <h1 class="subtitle">My services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Professional web design service: Creative, responsive, user-friendly websites tailored to your brand's unique identity and goals.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>APP Development</h2>
+                    <p>Professional app development service: Designing user-friendly interfaces for web and mobile applications.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>UI/UX design service: Creating engaging and user-friendly web interfaces to enhance user experiences.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio" class="portfolio">
+        <h1 class="subtitle">Portfolio</h1>
+        <div class="portfolio-items">
+            <!-- Add your portfolio items here -->
+            <div class="portfolio-item">
+                
+                <h2>Bike Rental System</h2>
+                <p>Bike rental system streamlines bike sharing, enabling users to easily rent bicycles, fostering eco-friendly transportation and reducing congestion in urban areas.</p>
+            </div>
+           
+          
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact" class="contact">
+        <h1 class="subtitle">Contact</h1>
+        <div class="contact-form">
+           <p> +91 1234567890</p>
+           <p>codsoftexample@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks)
+             {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
